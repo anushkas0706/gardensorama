@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+
+    <title>Gardensorama || Where home meets nature</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+
+    </script>
+    <link rel="icon" href="logo.png" type="image/x-icon">
+    <style>
+        /* Made with love by Mutiullah Samim*/
+
+        @import url('https://fonts.googleapis.com/css?family=Numans');
+
+        html,
+        body {
+            background-image: url('login.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100%;
+            font-family: 'Numans', sans-serif;
+        }
+
+        .container {
+            height: 100%;
+            align-content: center;
+        }
+
+        .card {
+            height: 370px;
+            margin-top: auto;
+            margin-bottom: auto;
+            width: 400px;
+            background-color: rgba(0, 0, 0, 0.5) !important;
+        }
+
+        .social_icon span {
+            font-size: 60px;
+            margin-left: 10px;
+            color: #FFC312;
+        }
+
+        .social_icon span:hover {
+            color: white;
+            cursor: pointer;
+        }
+
+        .card-header h3 {
+            color: white;
+        }
+
+        .social_icon {
+            position: absolute;
+            right: 20px;
+            top: -45px;
+        }
+
+        .input-group-prepend span {
+            width: 50px;
+            background-color: #FFC312;
+            color: black;
+            border: 0;
+        }
+
+        input:focus {
+            outline: solid ;
+            box-shadow: 0 0 0 0 ;
+
+        }
+
+        .remember {
+            color: white;
+        }
+
+        .remember input {
+            width: 20px;
+            height: 20px;
+            margin-left: 15px;
+            margin-right: 5px;
+        }
+
+        .login_btn {
+            color: black;
+            background-color: #FFC312;
+            width: 100px;
+        }
+
+        .login_btn:hover {
+            color: black;
+            background-color: white;
+        }
+
+        .links {
+            color: white;
+        }
+
+        .links a {
+            margin-left: 4px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="nav">
+        <a class="navbar-brand text-success" href="#footer">
+          <!-- <img src="logo1.png" alt="logo"> -->
+          Gardensorama
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item ">
+              <a class="nav-link" href="main.html">Home</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"  href="contactUs.html">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html">Blogs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Gallery</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
+            <button type="button" class="btn btn-info">
+              <span class="glyphicon glyphicon-search"></span> Search
+            </button>
+            <a class="nav-link text-light" id="regLog" href="login.html">Register</a>
+    
+    
+          </form>
+        </div>
+      </nav>
+    <!-- SIGN IN  -->
+    <div class="container my-5">
+        <div class="d-flex justify-content-center h-100">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Register</h3>
+                    <div class="d-flex justify-content-end social_icon">
+                        <span><i class="fab fa-facebook-square"></i></span>
+                        <span><i class="fab fa-google-plus-square"></i></span>
+                        <span><i class="fab fa-twitter-square"></i></span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Full name" id="fullname"
+                                onblur="checkName();"><span id="msgname" style="color: beige;"></span>
+
+                        </div>
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="email address" id="email"
+                                onblur="checkemail();"><span id="msgemail" style="color: beige;"></span>
+
+                        </div>
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="phone number" id="phone"
+                                onblur="checkPhone();"><span id="msgphone" style="color: beige;"></span>
+
+                        </div>
+                        <!-- <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-key"></i></span>
+                            </div>
+                            <input type="password" class="form-control" placeholder="password" id="password">
+                        </div> -->
+
+                        <div class="col-md-12 text-center">
+                            <button type="button" class="btn btn-warning" id="register" data-toggle="modal"
+                                data-target="#myModal">Submit</button>
+                        </div>
+
+                        <div class="col-md-12 text-center">
+                            <p class="text-light">We will mail you the exclusive designs and
+                                our team'll reach you out! </p>
+                        </div>
+                        <!-- Modal -->
+
+                        <div class="modal fade" id="myModal" role="dialog">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+
+                                        <h4 class="modal-title" id="title">Heyy!</h4>
+                                    </div>
+                                    <div class="modal-body text-danger">
+                                        <p id="name"></p>
+                                        <p id="msg"></p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default"
+                                            data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </form>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="container-fluid bg-dark text-light text-center">
+        <p>Copyright @2020 | Gardensorama private limited</p> 
+        <p> <a href="#nav">
+          Back to top </a> <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-up-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+           <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
+         </svg></p></div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script>
+
+
+        $("#register").click(function () {
+            var name = $("#fullname").val();
+            var email = $("#email").val();
+            var username = $("#username").val();
+            var span1= $("#msgname").val;
+            var span2= $("#msgemail").val;
+            var span3= $("#msgphone").val;
+            // var password = $("#password").val();
+            //|| span1!='.'||span2!='.'||span3!='.'
+            if (name == '' || email === '' || phone==''||span3=="Please enter a valid mobile number!") {
+                $("#title").text("Umm...");
+                $("#msg").text("Please enter your details correctly!");
+            }
+            else {
+                $("#title").text("Yayyyyy!");
+                $("#name").text("Dear " + name + " ,");
+                $("#msg").text("You have been successfully registered! We will be calling you soooon :)");
+            }
+
+        });
+
+        function checkemail() {
+            var email = document.getElementById("email").value;
+
+            if (email === '') {
+                document.getElementById("msgemail").innerHTML = "Please enter email"
+            }
+            else {
+                document.getElementById("msgemail").innerHTML = "";
+            }
+        }
+        function checkName() {
+            var name = document.getElementById("fullname").value;
+
+            if (name === '') {
+                document.getElementById("msgname").innerHTML = "Please enter your name"
+            }
+            else {
+                document.getElementById("msgname").innerHTML = "";
+            }
+        }
+        function checkPhone() {
+            var phone = document.getElementById("phone").value;
+            var regex = /^[0-9]{10}$/;
+
+            if (regex.test(phone)) {
+
+                document.getElementById("msgphone").innerHTML = "";
+            }
+            else {
+                document.getElementById("msgphone").innerHTML = "Please enter a valid mobile number!";
+            }
+
+        }
+    </script>
+</body>
+
+</html>
